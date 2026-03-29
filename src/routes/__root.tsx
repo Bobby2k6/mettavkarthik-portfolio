@@ -1,4 +1,5 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { useEffect, useState } from 'react'
 
 
 import '../styles.css'
@@ -22,6 +23,18 @@ export const Route = createRootRoute({
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const [showIntro, setShowIntro] = useState(true)
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setShowIntro(false)
+    }, 2100)
+
+    return () => {
+      window.clearTimeout(timer)
+    }
+  }, [])
+
   return (
     <html lang="en">
       <head>
@@ -33,6 +46,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         />
       </head>
       <body>
+        {showIntro ? (
+          <div className="startup-hello" aria-hidden="true">
+            <p className="startup-hello-text startup-hello-type">hello world_</p>
+          </div>
+        ) : null}
         {children}
         <Scripts />
       </body>

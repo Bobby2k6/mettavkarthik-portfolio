@@ -58,7 +58,7 @@
   --input: #2a2a3a;
   --ring: #7c3aed;
 
-  --app-bg: #07070d;
+  --app-bg: #06060d;
   --app-nav: rgba(10, 10, 18, 0.82);
   --app-panel: #111120;
   --app-text: #f3f4f6;
@@ -105,6 +105,30 @@
   }
 }
 
+@keyframes startup-hello-fade {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  68% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.985);
+  }
+}
+
+@keyframes startup-hello-type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12ch;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -122,6 +146,7 @@
       radial-gradient(circle at 85% 12%, rgba(99, 102, 241, 0.08), transparent 32%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
   }
 
   code,
@@ -131,8 +156,32 @@
 }
 
 @layer components {
+  .portfolio-nav-scroll {
+    scrollbar-width: none;
+  }
+
+  .portfolio-nav-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
   .portfolio-heading {
     @apply text-2xl font-semibold sm:text-3xl;
+  }
+
+  .portfolio-glow-text {
+    background: linear-gradient(110deg, #7c3aed 8%, #a78bfa 45%, #7c3aed 92%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 22px var(--app-accent-soft);
+  }
+
+  .portfolio-role {
+    background: linear-gradient(120deg, var(--app-accent), #c4b5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 16px color-mix(in srgb, var(--app-accent) 36%, transparent));
   }
 
   .portfolio-copy {
@@ -163,6 +212,38 @@
     border-color: var(--app-border);
     background: var(--app-panel);
     color: var(--app-text);
+  }
+
+  .portfolio-btn-outline {
+    border-color: var(--app-accent);
+    background: transparent;
+    color: var(--app-accent);
+  }
+
+  .experience-shell {
+    border: 1px solid color-mix(in srgb, var(--app-border) 78%, transparent);
+    background: color-mix(in srgb, var(--app-panel) 90%, transparent);
+    box-shadow: 0 10px 24px -24px rgba(0, 0, 0, 0.6);
+  }
+
+  .experience-feature {
+    @apply rounded-2xl border px-4 py-3 text-sm font-medium transition-all duration-200;
+    border-color: color-mix(in srgb, var(--app-border) 80%, transparent);
+    background: color-mix(in srgb, var(--app-panel) 92%, transparent);
+    color: var(--app-text);
+  }
+
+  .experience-feature:hover {
+    border-color: color-mix(in srgb, var(--app-accent) 36%, var(--app-border));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -18px var(--app-accent-soft);
+  }
+
+  .portfolio-section-card {
+    @apply rounded-2xl border;
+    border-color: var(--app-border);
+    background: color-mix(in srgb, var(--app-panel) 94%, transparent);
+    box-shadow: 0 8px 30px -22px rgba(0, 0, 0, 0.6);
   }
 
   .portfolio-btn-small {
@@ -197,5 +278,45 @@
 
   .animate-caret-blink {
     animation: caret-blink 1s step-end infinite;
+  }
+
+  .startup-hello {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: grid;
+    place-items: center;
+    background: var(--app-bg);
+    animation: startup-hello-fade 1850ms ease forwards;
+    pointer-events: none;
+  }
+
+  .startup-hello-text {
+    margin: 0;
+    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+    font-size: clamp(1.1rem, 1.8vw + 0.8rem, 2rem);
+    letter-spacing: 0.08em;
+    color: var(--app-accent);
+    text-shadow: 0 0 16px color-mix(in srgb, var(--app-accent) 34%, transparent);
+  }
+
+  .startup-hello-type {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: startup-hello-type 1150ms steps(12, end) 220ms both;
+  }
+
+  .startup-hello-type::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0.08em;
+    height: 0.95em;
+    width: 0.12em;
+    background: var(--app-accent);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--app-accent) 35%, transparent);
+    animation: caret-blink 1s step-end 3;
   }
 }
