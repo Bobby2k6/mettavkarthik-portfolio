@@ -34,7 +34,7 @@ const jobs = [
 
 const educations = [
   {
-    school: 'Gayatri Vidya Parishad College of Engineering(A)',
+    school: 'Gayatri Vidya Parishad College of Engineering(A), Visakhapatnam',
     startDate: 'Sep 2023',
     endDate: 'May 2027',
     summary:
@@ -77,7 +77,7 @@ function App() {
       </button>
 
       <a
-        href="Bobby2k6/mettavkarthik-portfolio/src/routes/resume.pdf"
+        href={`${import.meta.env.BASE_URL}resume.pdf`}
         download="resume.pdf"
         aria-label="Download resume PDF"
         className="fixed top-6 right-6 z-50 flex items-center justify-center w-11 h-11 rounded-full border bg-background/80 backdrop-blur shadow-md hover:opacity-70 transition-opacity"
@@ -116,7 +116,7 @@ function App() {
                 architecture.
               </p>
               <img
-                src="/headshot-on-white.jpg"
+                src={`${import.meta.env.BASE_URL}headshot-on-white.jpg`}
                 alt="Professional headshot"
                 className="w-44 h-52 rounded-2xl object-cover"
               />
