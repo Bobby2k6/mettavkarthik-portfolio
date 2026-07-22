@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import {
-  Download,
   Github,
   Linkedin,
   Mail,
@@ -54,7 +53,7 @@ const projects: Project[] = [
     description:
       'A contest system focused on fair problem-solving through hidden submissions, anti-cheat guards, and real-time leaderboard updates for coding events.',
     tech: ['Java', 'Spring Boot', 'React', 'Redis'],
-    github: 'https://github.com',
+    github: 'https://bobby2k6.github.io/blind-coding/',
   },
   {
     title: 'Personal Finance Chatbot',
@@ -63,6 +62,20 @@ const projects: Project[] = [
     tech: ['Python', 'FastAPI', 'OpenAI API', 'SQLite'],
     github: 'https://github.com',
   },
+  {
+  title: 'AttendanceHub - Attendance Management System',
+  description:
+    'A RESTful attendance management system that helps college faculty efficiently manage and analyze student attendance records uploaded from Excel sheets, with advanced filtering and analytics by attendance percentage, semester, and roll number range, plus automated email/SMS alerts via Nodemailer to notify students and parents about low attendance - built on a structured 3-tier architecture.',
+  tech: ['React', 'Tailwind CSS', 'Express.js', 'Nodemailer', 'PostgreSQL'],
+  github: 'https://github.com',
+},
+{
+  title: 'BuildBox - ASCII Club Workshop',
+  description:
+    'A browser-based virtual lab that lets students learn AI/ML concepts through guided, hands-on coding exercises with real-time Python execution via Pyodide, featuring interactive modules on Vector Databases, Embeddings, Similarity Search, and Retrieval-Augmented Generation (RAG) alongside an integrated Monaco Editor, terminal, progress tracking, and task validation.',
+  tech: ['React', 'TypeScript', 'Vite', 'Monaco Editor', 'xterm.js', 'Pyodide'],
+  github: 'https://github.com',
+},
 ]
 
 function PortfolioPage() {
@@ -339,7 +352,7 @@ function PortfolioPage() {
           <p className="mb-3 text-sm uppercase tracking-[0.18em] text-[var(--app-muted)]">Visakhapatnam, India</p>
           <h1 className="text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">M V Karthikeyan</h1>
           <p className="mt-4 max-w-3xl text-base text-[var(--app-muted)] sm:text-lg">
-            Building cool stuff with code • Breaking things to learn • Exploring AI & beyond
+            Full-stack developer turning real-world problems into scalable software • From IoT-driven industrial dashboards to AI-powered tools.
           </p>
           <p className="mt-4 text-sm text-[var(--app-muted)]">BTech CSE Student (2023-2027) • CGPA 9.17 • Full Stack Web Development</p>
 
@@ -359,7 +372,10 @@ function PortfolioPage() {
         <section id="about" className="reveal mx-auto max-w-5xl scroll-mt-28 py-12">
           <h2 className="portfolio-heading">About</h2>
           <p className="portfolio-copy mt-4">
-            Passionate developer building scalable web applications, strong in Data Structures and Algorithms, and deeply interested in AI-driven systems and dependable software architecture.
+           B.Tech CSE student interested in diverse areas of computer science, including full-stack web development, AI/ML,
+          understanding how systems are designed, and cybersecurity. Competitive programming has helped build a structured
+          approach to problem-solving, and I am comfortable leveraging AI tools to improve productivity without compromising
+          my understanding of core concepts.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {['Full Stack Developer', 'Strong in DSA', 'AI & Systems Interest'].map((item) => (
