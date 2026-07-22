@@ -1,7 +1,6 @@
 import { marked } from 'marked'
 
 import { createFileRoute } from '@tanstack/react-router'
-import { allJobs, allEducations } from 'content-collections'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
@@ -14,6 +13,50 @@ import {
 export const Route = createFileRoute('/resume')({
   component: App,
 })
+
+const jobs = [
+  {
+    jobTitle: 'Software Developer Intern',
+    company: 'RINL, Vizag Steel Plant',
+    location: 'Visakhapatnam, India',
+    startDate: 'June 2025',
+    endDate: 'July 2025',
+    summary:
+      'Project: Predictive Maintenance Scheduler (Prototype). Tech Stack: React (TypeScript), Tailwind CSS, shadcn/ui, Recharts.',
+    tags: ['React (TypeScript)', 'Tailwind CSS', 'shadcn/ui', 'Recharts'],
+    content: `
+- Built a predictive maintenance web application within RINL's Industry 4.0 ecosystem, which houses the Kalpataru CoE, an IIoT facility with industrial IoT sensor kits, automation panels, and AI/ML platforms for equipment monitoring.
+- Designed dashboards to visualize equipment usage, downtime trends, and maintenance insights, aligned with RINL's OEE and IIoT monitoring objectives.
+- Gained practical exposure to how IoT sensor data pipelines feed predictive maintenance systems in a live steel plant environment.
+`,
+  },
+]
+
+const educations = [
+  {
+    school: 'Gayatri Vidya Parishad College of Engineering, Visakhapatnam',
+    summary:
+      'Bachelor of Technology, Computer Science and Engineering (Full Time) — Sep 2023 to May 2027',
+    content: `
+- CGPA: 9.16 / 10 (91.6%)
+`,
+  },
+  {
+    school: 'Sri Chaitanya Junior College',
+    summary:
+      'Class XII, State Board, MPC (Full Time) — May 2022 to Jun 2023',
+    content: `
+- Marks: 947 / 1000 (94.7%)
+`,
+  },
+  {
+    school: 'Sri Chaitanya Techno School',
+    summary: 'Class X, State Board (Full Time) — May 2020 to Jun 2021',
+    content: `
+- Marks: 597 / 600 (99.5%)
+`,
+  },
+]
 
 function App() {
   return (
@@ -56,7 +99,7 @@ function App() {
             Work Experience
           </h2>
           <div className="space-y-6">
-            {allJobs.map((job) => (
+            {jobs.map((job) => (
               <Card key={job.jobTitle}>
                 <CardHeader>
                   <div className="flex justify-between items-start">
@@ -113,7 +156,7 @@ function App() {
             Education
           </h2>
           <div className="space-y-6">
-            {allEducations.map((education) => (
+            {educations.map((education) => (
               <Card key={education.school}>
                 <CardHeader>
                   <CardTitle className="text-xl">
