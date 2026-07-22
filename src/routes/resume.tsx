@@ -95,14 +95,16 @@ function App() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex items-center gap-8">
+            <div className="flex items-start gap-8">
               <p className="flex-1 leading-relaxed">
                 Computer Science student with hands-on experience building
                 full-stack, IoT-driven applications for industrial
                 environments. Skilled in React, TypeScript, and modern UI
-                frameworks, with a strong interest in competitive programming
-                and solving real-world engineering problems through
-                thoughtful, scalable software design.
+                frameworks, with a strong foundation in Data Structures and
+                Algorithms and a keen interest in AI-driven systems.
+                Passionate about solving real-world engineering problems
+                through thoughtful, scalable, and dependable software
+                architecture.
               </p>
               <img
                 src="/headshot-on-white.jpg"

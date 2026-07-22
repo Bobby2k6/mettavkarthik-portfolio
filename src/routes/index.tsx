@@ -51,19 +51,20 @@ const projects: Project[] = [
     github: 'https://github.com',
     live: 'https://example.com',
   },
-  {
-    title: 'Personal Finance Chatbot',
-    description:
-      'An AI-assisted budgeting companion that parses spending patterns, recommends savings strategies, and answers financial queries with contextual insights.',
-    tech: ['Python', 'FastAPI', 'OpenAI API', 'SQLite'],
-    github: 'https://github.com',
-    live: 'https://example.com',
-  },
+  
   {
     title: 'Blind Coding Contest Platform',
     description:
       'A contest system focused on fair problem-solving through hidden submissions, anti-cheat guards, and real-time leaderboard updates for coding events.',
     tech: ['Java', 'Spring Boot', 'React', 'Redis'],
+    github: 'https://github.com',
+    live: 'https://example.com',
+  },
+  {
+    title: 'Personal Finance Chatbot',
+    description:
+      'An AI-assisted budgeting companion that parses spending patterns, recommends savings strategies, and answers financial queries with contextual insights.',
+    tech: ['Python', 'FastAPI', 'OpenAI API', 'SQLite'],
     github: 'https://github.com',
     live: 'https://example.com',
   },
@@ -267,13 +268,13 @@ function PortfolioPage() {
 
       {loadingStage !== 'done' && (
         <div
-          className={`fixed inset-0 z-[80] flex items-center justify-center bg-[var(--app-bg)] transition-opacity duration-500 ${
+          className={`fixed inset-0 z-[80] flex items-center justify-center overflow-hidden bg-[var(--app-bg)] transition-opacity duration-500 ${
             loadingStage === 'fading' ? 'opacity-0' : 'opacity-100'
           }`}
         >
           <p
-            className={`font-mono text-3xl sm:text-5xl tracking-tight text-[var(--app-accent)] transition-transform duration-[600ms] ease-out ${
-              loadingStage === 'fading' ? 'scale-150' : 'scale-100'
+            className={`font-mono text-3xl sm:text-5xl tracking-tight text-[var(--app-accent)] transition-transform duration-[600ms] ease-in origin-center ${
+              loadingStage === 'fading' ? 'scale-[12]' : 'scale-100'
             }`}
           >
             {typedText}
@@ -353,7 +354,7 @@ function PortfolioPage() {
             </a>
             <a className="portfolio-btn portfolio-btn-alt" href="/resume">
               <Download size={15} />
-              Download Resume
+              My Resume
             </a>
             <Link className="portfolio-btn portfolio-btn-alt" to="/contact">
               Contact Me
