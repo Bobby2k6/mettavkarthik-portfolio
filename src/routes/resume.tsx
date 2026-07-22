@@ -116,7 +116,7 @@ function App() {
                 architecture.
               </p>
               <img
-                src={`${import.meta.env.BASE_URL}headshot-on-white.jpg`}
+                src={`${import.meta.env.BASE_URL}kar.jpg`}
                 alt="Professional headshot"
                 className="w-44 h-52 rounded-2xl object-cover"
               />
