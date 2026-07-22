@@ -366,7 +366,7 @@ function PortfolioPage() {
               My Resume
             </a>
             <Link className="portfolio-btn portfolio-btn-alt" to="/contact">
-              Contact Me
+              Contact
             </Link>
           </div>
         </section>
