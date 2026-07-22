@@ -39,7 +39,7 @@ function App() {
           <CardContent>
             <div className="flex items-center gap-8">
               <p className="flex-1 leading-relaxed">
-                hallaluya
+                hallaluya praise the lord
               </p>
               <img
                 src="/headshot-on-white.jpg"
