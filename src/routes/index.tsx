@@ -348,7 +348,6 @@ function PortfolioPage() {
               View Projects
             </a>
             <a className="portfolio-btn portfolio-btn-alt" href="/resume">
-              <Download size={15} />
               My Resume
             </a>
             <Link className="portfolio-btn portfolio-btn-alt" to="/contact">
@@ -385,7 +384,7 @@ function PortfolioPage() {
 
             <p className="mt-4 text-[var(--app-muted)]">Project: Predictive Maintenance Scheduler (Prototype)</p>
 
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2">Tech
               {['React (TypeScript)', 'Tailwind CSS', 'shadcn/ui', 'Recharts'].map((stack) => (
                 <span key={stack} className="portfolio-pill text-xs">
                   {stack}
@@ -443,8 +442,8 @@ function PortfolioPage() {
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <SkillBlock title="Languages" items={['Java', 'C', 'Python', 'SQL']} />
             <SkillBlock title="Web Development" items={['HTML', 'CSS', 'JavaScript', 'React']} />
-            <SkillBlock title="Backend Technologies" items={['JSP', 'Servlets', 'JDBC', 'Node', 'Express.js']} />
             <SkillBlock title="Databases" items={['MySQL', 'MongoDB', 'Supabase']} />
+            <SkillBlock title="Backend Technologies" items={['JSP', 'Servlets', 'JDBC', 'Node', 'Express.js']} />     
             <SkillBlock title="Tools & Platforms" items={['Git', 'GitHub', 'VS Code', 'NetBeans', 'Netlify']} />
             <SkillBlock
               title="Core Concepts"
@@ -456,7 +455,7 @@ function PortfolioPage() {
         <section id="achievements" className="reveal mx-auto max-w-5xl scroll-mt-28 py-12">
           <h2 className="portfolio-heading">Achievements</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {['HackerRank 5 star in Java', 'Solved 250+ coding problems', 'Certifications: Infosys, IBM, AWS'].map((item) => (
+            {['HackerRank 5 star in Java', 'Solved 250+ coding problems in Leetcode , Codechef, HackerRank', 'Certifications: Infosys, IBM, AWS'].map((item) => (
               <div key={item} className="rounded-2xl border border-[var(--app-border)] bg-[var(--app-panel)] p-5 text-sm text-[var(--app-muted)]">
                 {item}
               </div>
