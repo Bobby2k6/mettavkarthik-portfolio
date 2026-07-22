@@ -63,19 +63,19 @@ const projects: Project[] = [
     github: 'https://github.com',
   },
   {
-  title: 'AttendanceHub - Attendance Management System',
-  description:
-    'A RESTful attendance management system that helps college faculty efficiently manage and analyze student attendance records uploaded from Excel sheets, with advanced filtering and analytics by attendance percentage, semester, and roll number range, plus automated email/SMS alerts via Nodemailer to notify students and parents about low attendance - built on a structured 3-tier architecture.',
-  tech: ['React', 'Tailwind CSS', 'Express.js', 'Nodemailer', 'PostgreSQL'],
-  github: 'https://github.com',
-},
-{
-  title: 'BuildBox - ASCII Club Workshop',
-  description:
-    'A browser-based virtual lab that lets students learn AI/ML concepts through guided, hands-on coding exercises with real-time Python execution via Pyodide, featuring interactive modules on Vector Databases, Embeddings, Similarity Search, and Retrieval-Augmented Generation (RAG) alongside an integrated Monaco Editor, terminal, progress tracking, and task validation.',
-  tech: ['React', 'TypeScript', 'Vite', 'Monaco Editor', 'xterm.js', 'Pyodide'],
-  github: 'https://github.com',
-},
+    title: 'AttendanceHub - Attendance Management System',
+    description:
+      'A RESTful system that helps college faculty manage and analyze student attendance from Excel sheets, with filtering by percentage, semester, and roll number, plus automated email/SMS alerts for low attendance.',
+    tech: ['React', 'Tailwind CSS', 'Express.js', 'Nodemailer', 'PostgreSQL'],
+    github: 'https://github.com',
+  },
+  {
+    title: 'BuildBox - ASCII Club Workshop',
+    description:
+      'A browser-based virtual lab for learning AI/ML through hands-on coding, with real-time Python execution and interactive modules on Vector Databases, Embeddings, and Retrieval-Augmented Generation (RAG).',
+    tech: ['React', 'TypeScript', 'Vite', 'Monaco Editor', 'xterm.js', 'Pyodide'],
+    github: 'https://github.com',
+  },
 ]
 
 function PortfolioPage() {
@@ -352,7 +352,9 @@ function PortfolioPage() {
           <p className="mb-3 text-sm uppercase tracking-[0.18em] text-[var(--app-muted)]">Visakhapatnam, India</p>
           <h1 className="text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">M V Karthikeyan</h1>
           <p className="mt-4 max-w-3xl text-base text-[var(--app-muted)] sm:text-lg">
-            Full-stack developer turning real-world problems into scalable software • From IoT-driven industrial dashboards to AI-powered tools.
+           •Full-stack developer turning real-world problems into scalable software
+           <br /> 
+           • From IoT-driven industrial dashboards to AI-powered tools.
           </p>
           <p className="mt-4 text-sm text-[var(--app-muted)]">BTech CSE Student (2023-2027) • CGPA 9.17 • Full Stack Web Development</p>
 

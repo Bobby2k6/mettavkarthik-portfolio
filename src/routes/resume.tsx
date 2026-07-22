@@ -1,7 +1,7 @@
 import { marked } from 'marked'
 
 import { createFileRoute, useRouter } from '@tanstack/react-router'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Download } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
@@ -75,6 +75,15 @@ function App() {
       >
         <ArrowLeft className="w-5 h-5" />
       </button>
+
+      <a
+        href="/resume.pdf"
+        download="resume.pdf"
+        aria-label="Download resume PDF"
+        className="fixed top-6 right-6 z-50 flex items-center justify-center w-11 h-11 rounded-full border bg-background/80 backdrop-blur shadow-md hover:opacity-70 transition-opacity"
+      >
+        <Download className="w-5 h-5" />
+      </a>
 
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="text-center space-y-4">
