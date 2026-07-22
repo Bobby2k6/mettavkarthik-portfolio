@@ -21,8 +21,7 @@ const jobs = [
     location: 'Visakhapatnam, India',
     startDate: 'June 2025',
     endDate: 'July 2025',
-    summary:
-      'Project: Predictive Maintenance Scheduler (Prototype). Tech Stack: React (TypeScript), Tailwind CSS, shadcn/ui, Recharts.',
+    summary: 'Project: Predictive Maintenance Scheduler (Prototype)',
     tags: ['React (TypeScript)', 'Tailwind CSS', 'shadcn/ui', 'Recharts'],
     content: `
 - Built a predictive maintenance web application within RINL's Industry 4.0 ecosystem, which houses the Kalpataru CoE, an IIoT facility with industrial IoT sensor kits, automation panels, and AI/ML platforms for equipment monitoring.
@@ -34,24 +33,29 @@ const jobs = [
 
 const educations = [
   {
-    school: 'Gayatri Vidya Parishad College of Engineering, Visakhapatnam',
+    school: 'Gayatri Vidya Parishad College of Engineering(A), Visakhapatnam',
+    startDate: 'Sep 2023',
+    endDate: 'May 2027',
     summary:
-      'Bachelor of Technology, Computer Science and Engineering (Full Time) — Sep 2023 to May 2027',
+      'Bachelor of Technology, Computer Science and Engineering',
     content: `
 - CGPA: 9.16 / 10 (91.6%)
 `,
   },
   {
     school: 'Sri Chaitanya Junior College',
-    summary:
-      'Class XII, State Board, MPC (Full Time) — May 2022 to Jun 2023',
+    startDate: 'May 2022',
+    endDate: 'Jun 2023',
+    summary: 'Class XII, State Board, MPC',
     content: `
 - Marks: 947 / 1000 (94.7%)
 `,
   },
   {
     school: 'Sri Chaitanya Techno School',
-    summary: 'Class X, State Board (Full Time) — May 2020 to Jun 2021',
+    startDate: 'May 2020',
+    endDate: 'Jun 2021',
+    summary: 'Class X, State Board',
     content: `
 - Marks: 597 / 600 (99.5%)
 `,
@@ -72,17 +76,22 @@ function App() {
           <Separator className="mt-8" />
         </div>
 
-        {/* Career Summary */}
+        {/* Professional Summary */}
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl">
-              Career Summary
+              Professional Summary
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex items-center gap-8">
               <p className="flex-1 leading-relaxed">
-                hallaluya praise the lord
+                Computer Science student with hands-on experience building
+                full-stack, IoT-driven applications for industrial
+                environments. Skilled in React, TypeScript, and modern UI
+                frameworks, with a strong interest in competitive programming
+                and solving real-world engineering problems through
+                thoughtful, scalable software design.
               </p>
               <img
                 src="/headshot-on-white.jpg"
@@ -117,10 +126,13 @@ function App() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-6 leading-relaxed">
+                  <p className="mb-4 leading-relaxed">
                     {job.summary}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap items-center gap-2 mb-6">
+                    <span className="font-medium mr-1">
+                      Tech Stack:
+                    </span>
                     {job.tags.map((tag) => (
                       <HoverCard key={tag}>
                         <HoverCardTrigger>
@@ -159,9 +171,14 @@ function App() {
             {educations.map((education) => (
               <Card key={education.school}>
                 <CardHeader>
-                  <CardTitle className="text-xl">
-                    {education.school}
-                  </CardTitle>
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="text-xl">
+                      {education.school}
+                    </CardTitle>
+                    <Badge variant="secondary" className="text-sm">
+                      {education.startDate} - {education.endDate}
+                    </Badge>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="leading-relaxed">
