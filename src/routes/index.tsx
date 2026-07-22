@@ -28,7 +28,6 @@ type Project = {
   description: string
   tech: string[]
   github: string
-  live: string
 }
 
 type NavSectionId = Extract<SectionId, 'hero' | 'about' | 'experience' | 'projects' | 'skills' | 'contact'>
@@ -49,16 +48,13 @@ const projects: Project[] = [
       'A centralized portal for internship posting, application tracking, and mentor evaluation with role-aware dashboards for students, faculty, and admins.',
     tech: ['React', 'Tailwind', 'Node.js', 'PostgreSQL'],
     github: 'https://github.com',
-    live: 'https://example.com',
   },
-  
   {
     title: 'Blind Coding Contest Platform',
     description:
       'A contest system focused on fair problem-solving through hidden submissions, anti-cheat guards, and real-time leaderboard updates for coding events.',
     tech: ['Java', 'Spring Boot', 'React', 'Redis'],
     github: 'https://github.com',
-    live: 'https://example.com',
   },
   {
     title: 'Personal Finance Chatbot',
@@ -66,7 +62,6 @@ const projects: Project[] = [
       'An AI-assisted budgeting companion that parses spending patterns, recommends savings strategies, and answers financial queries with contextual insights.',
     tech: ['Python', 'FastAPI', 'OpenAI API', 'SQLite'],
     github: 'https://github.com',
-    live: 'https://example.com',
   },
 ]
 
@@ -379,15 +374,39 @@ function PortfolioPage() {
         <section id="experience" className="reveal mx-auto max-w-5xl scroll-mt-28 py-12">
           <h2 className="portfolio-heading">Experience</h2>
           <article className="mt-6 rounded-2xl border border-[var(--app-border)] bg-[var(--app-panel)] p-6">
-            <p className="text-xs uppercase tracking-[0.16em] text-[var(--app-muted)]">Software Developer Intern</p>
-            <h3 className="mt-2 text-2xl font-semibold">Vizag Steel Plant</h3>
-            <p className="mt-2 text-[var(--app-muted)]">Project: Predictive Maintenance Scheduler</p>
-            <ul className="mt-5 grid gap-3 text-sm text-[var(--app-muted)] sm:grid-cols-2">
-              {['Real-time equipment monitoring', 'Operational dashboards', 'Role-based access control', 'Automated critical alerts'].map((item) => (
-                <li key={item} className="rounded-xl border border-[var(--app-border)] bg-[var(--app-bg)] px-4 py-3">
-                  {item}
-                </li>
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <p className="text-xs uppercase tracking-[0.16em] text-[var(--app-muted)]">Software Developer Intern</p>
+                <h3 className="mt-2 text-2xl font-semibold">RINL, Vizag Steel Plant</h3>
+                <p className="mt-1 text-sm text-[var(--app-muted)]">Visakhapatnam, India</p>
+              </div>
+              <span className="portfolio-pill text-xs">June 2025 - July 2025</span>
+            </div>
+
+            <p className="mt-4 text-[var(--app-muted)]">Project: Predictive Maintenance Scheduler (Prototype)</p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {['React (TypeScript)', 'Tailwind CSS', 'shadcn/ui', 'Recharts'].map((stack) => (
+                <span key={stack} className="portfolio-pill text-xs">
+                  {stack}
+                </span>
               ))}
+            </div>
+
+            <ul className="mt-5 list-disc space-y-2 pl-5 text-sm text-[var(--app-muted)]">
+              <li>
+                Built a predictive maintenance web application within RINL&apos;s Industry 4.0 ecosystem, which houses
+                the Kalpataru CoE, an IIoT facility with industrial IoT sensor kits, automation panels, and AI/ML
+                platforms for equipment monitoring.
+              </li>
+              <li>
+                Designed dashboards to visualize equipment usage, downtime trends, and maintenance insights, aligned
+                with RINL&apos;s OEE and IIoT monitoring objectives.
+              </li>
+              <li>
+                Gained practical exposure to how IoT sensor data pipelines feed predictive maintenance systems in a
+                live steel plant environment.
+              </li>
             </ul>
           </article>
         </section>
@@ -413,9 +432,6 @@ function PortfolioPage() {
                   <a className="portfolio-btn portfolio-btn-small" href={project.github} target="_blank" rel="noreferrer">
                     <Github size={14} /> GitHub
                   </a>
-                  <a className="portfolio-btn portfolio-btn-small portfolio-btn-alt" href={project.live} target="_blank" rel="noreferrer">
-                    Live Demo
-                  </a>
                 </div>
               </article>
             ))}
@@ -425,11 +441,15 @@ function PortfolioPage() {
         <section id="skills" className="reveal mx-auto max-w-5xl scroll-mt-28 py-12">
           <h2 className="portfolio-heading">Skills</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <SkillBlock title="Languages" items={['Java', 'Python', 'C++', 'JavaScript', 'SQL']} />
-            <SkillBlock title="Web" items={['React', 'Tailwind', 'HTML', 'CSS']} />
-            <SkillBlock title="Backend" items={['Spring Boot', 'JSP', 'Servlets']} />
-            <SkillBlock title="Tools" items={['Git', 'Netlify', 'VS Code']} />
-            <SkillBlock title="Concepts" items={['DSA', 'OOP', 'DBMS']} />
+            <SkillBlock title="Languages" items={['Java', 'C', 'Python', 'SQL']} />
+            <SkillBlock title="Web Development" items={['HTML', 'CSS', 'JavaScript', 'React']} />
+            <SkillBlock title="Backend Technologies" items={['JSP', 'Servlets', 'JDBC', 'Node', 'Express.js']} />
+            <SkillBlock title="Databases" items={['MySQL', 'MongoDB', 'Supabase']} />
+            <SkillBlock title="Tools & Platforms" items={['Git', 'GitHub', 'VS Code', 'NetBeans', 'Netlify']} />
+            <SkillBlock
+              title="Core Concepts"
+              items={['Data Structures & Algorithms', 'OOP', 'DBMS', 'MVC Architecture', 'Operating Systems']}
+            />
           </div>
         </section>
 
