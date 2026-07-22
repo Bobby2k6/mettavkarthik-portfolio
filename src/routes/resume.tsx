@@ -1,6 +1,7 @@
 import { marked } from 'marked'
 
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
+import { ArrowLeft } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
@@ -48,7 +49,7 @@ const educations = [
     endDate: 'Jun 2023',
     summary: 'Class XII, State Board, MPC',
     content: `
-- Marks: 947 / 1000 (94.7%)
+- Marks Scored: 947 / 1000 (94.7%)
 `,
   },
   {
@@ -57,7 +58,7 @@ const educations = [
     endDate: 'Jun 2021',
     summary: 'Class X, State Board',
     content: `
-- Marks: 597 / 600 (99.5%)
+- Marks Scored: 597 / 600 (99.5%)
 `,
   },
 ]
@@ -66,6 +67,14 @@ function App() {
   return (
     <div className="min-h-screen p-8 lg:p-12">
       <div className="max-w-4xl mx-auto space-y-12">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </Link>
+
         <div className="text-center space-y-4">
           <h1 className="text-5xl font-bold">
             My Resume
