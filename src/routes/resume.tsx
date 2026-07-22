@@ -34,7 +34,7 @@ const jobs = [
 
 const educations = [
   {
-    school: 'Gayatri Vidya Parishad College of Engineering(A), Visakhapatnam',
+    school: 'Gayatri Vidya Parishad College of Engineering(A)',
     startDate: 'Sep 2023',
     endDate: 'May 2027',
     summary:

@@ -352,9 +352,7 @@ function PortfolioPage() {
           <p className="mb-3 text-sm uppercase tracking-[0.18em] text-[var(--app-muted)]">Visakhapatnam, India</p>
           <h1 className="text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">M V Karthikeyan</h1>
           <p className="mt-4 max-w-3xl text-base text-[var(--app-muted)] sm:text-lg">
-           •Full-stack developer turning real-world problems into scalable software
-           <br /> 
-           • From IoT-driven industrial dashboards to AI-powered tools.
+           • Full-stack developer turning real-world problems into scalable software, from IoT-driven industrial dashboards to AI-powered tools.
           </p>
           <p className="mt-4 text-sm text-[var(--app-muted)]">BTech CSE Student (2023-2027) • CGPA 9.17 • Full Stack Web Development</p>
 
@@ -366,7 +364,7 @@ function PortfolioPage() {
               My Resume
             </a>
             <Link className="portfolio-btn portfolio-btn-alt" to="/contact">
-              Contact
+              Contact Me
             </Link>
           </div>
         </section>
