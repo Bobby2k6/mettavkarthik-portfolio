@@ -451,10 +451,10 @@ function PortfolioPage() {
           <p className="portfolio-copy mt-4">Open to internships, collaborations, and product-focused engineering conversations.</p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <ContactButton href="mailto:karthikeyan@example.com" icon={<Mail size={17} />} label="Email" />
-            <ContactButton href="tel:+910000000000" icon={<Phone size={17} />} label="Phone" />
-            <ContactButton href="https://linkedin.com" icon={<Linkedin size={17} />} label="LinkedIn" />
-            <ContactButton href="https://github.com" icon={<Github size={17} />} label="GitHub" />
+            <ContactButton href="mailto:mvkarthikeyan3@gmail.com" icon={<Mail size={17} />} label="Email" />
+            <ContactButton href="tel:+91 837445899" icon={<Phone size={17} />} label="Phone" />
+            <ContactButton href="https://www.linkedin.com/in/karthikeyan-metta/" icon={<Linkedin size={17} />} label="LinkedIn" />
+            <ContactButton href="https://github.com/Bobby2k6" icon={<Github size={17} />} label="GitHub" />
           </div>
         </section>
       </main>
