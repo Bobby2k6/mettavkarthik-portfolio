@@ -271,7 +271,11 @@ function PortfolioPage() {
             loadingStage === 'fading' ? 'opacity-0' : 'opacity-100'
           }`}
         >
-          <p className="font-mono text-3xl sm:text-5xl tracking-tight text-[var(--app-accent)]">
+          <p
+            className={`font-mono text-3xl sm:text-5xl tracking-tight text-[var(--app-accent)] transition-transform duration-[600ms] ease-out ${
+              loadingStage === 'fading' ? 'scale-150' : 'scale-100'
+            }`}
+          >
             {typedText}
             <span className="inline-block h-[1.1em] w-[2px] translate-y-1 animate-caret-blink bg-[var(--app-accent)]" />
           </p>
