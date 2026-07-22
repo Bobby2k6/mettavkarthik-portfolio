@@ -5,6 +5,7 @@ import viteReact from '@vitejs/plugin-react'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 import contentCollections from '@content-collections/vite'
+
 // Blog posts are dynamic routes (/blog/$slug) and aren't linked from any
 // other page yet, so crawlLinks alone can't discover them. We read the
 // content directory directly so every post gets prerendered automatically,
@@ -12,8 +13,8 @@ import contentCollections from '@content-collections/vite'
 const blogSlugs = readdirSync('content/blog')
   .filter((file) => file.endsWith('.md'))
   .map((file) => file.replace(/\.md$/, ''))
+
 const config = defineConfig({
-  base: '/',
   plugins: [
     contentCollections(),
     viteTsConfigPaths({
@@ -36,4 +37,5 @@ const config = defineConfig({
     viteReact(),
   ],
 })
+
 export default config
