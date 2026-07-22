@@ -1,6 +1,6 @@
 ---
-jobTitle: Job Title 1
-company: Company 1
+jobTitle: Software Engineer
+company: Infosys
 location: Remote
 startDate: 2021-01-01
 endDate: 2021-12-31
