@@ -7,11 +7,13 @@ import tailwindcss from '@tailwindcss/vite'
 import contentCollections from '@content-collections/vite'
 // Blog posts are dynamic routes (/blog/$slug) and aren't linked from any
 // other page yet, so crawlLinks alone can't discover them. We read the
+// content directory directly so every post gets prerendered automatically,
+// including ones added later.
 const blogSlugs = readdirSync('content/blog')
   .filter((file) => file.endsWith('.md'))
   .map((file) => file.replace(/\.md$/, ''))
 const config = defineConfig({
-  base: '/mettavkarthik-portfolio/',
+  base: '/',
   plugins: [
     contentCollections(),
     viteTsConfigPaths({
