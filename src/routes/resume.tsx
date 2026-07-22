@@ -77,7 +77,7 @@ function App() {
       </button>
 
       <a
-        href="/resume.pdf"
+        href="Bobby2k6/mettavkarthik-portfolio/src/routes/resume.pdf"
         download="resume.pdf"
         aria-label="Download resume PDF"
         className="fixed top-6 right-6 z-50 flex items-center justify-center w-11 h-11 rounded-full border bg-background/80 backdrop-blur shadow-md hover:opacity-70 transition-opacity"
