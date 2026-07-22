@@ -39,7 +39,7 @@ function App() {
           <CardContent>
             <div className="flex items-center gap-8">
               <p className="flex-1 leading-relaxed">
-                I am a passionate and driven professional seeking
+                I am a hello and driven professional seeking
                 opportunities that will leverage my extensive experience
                 in frontend development while providing continuous growth
                 and learning opportunities. My goal is to contribute to
