@@ -91,8 +91,8 @@ function App() {
       </button>
 
       <a
-        href={'resume.pdf'}
-        target="_blank"
+        href={`${import.meta.env.BASE_URL}resume.pdf`}
+        target="_main"
         rel="noopener noreferrer"
         aria-label="View resume PDF"
         className="fixed top-6 right-6 z-50 flex items-center justify-center w-11 h-11 rounded-full border bg-background/80 backdrop-blur shadow-md hover:opacity-70 transition-opacity"
