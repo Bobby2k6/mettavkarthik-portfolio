@@ -20,10 +20,8 @@ export const Route = createRootRoute({
     links: [
       {
         rel: 'icon',
-        type: 'image/svg+xml',
-        href: `data:image/svg+xml,${encodeURIComponent(
-          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><text x="32" y="46" font-size="46" text-anchor="middle">✌️</text></svg>',
-        )}`,
+        type: 'image/png',
+        href: `${import.meta.env.BASE_URL}favicon.png`,
       },
     ],
   }),
