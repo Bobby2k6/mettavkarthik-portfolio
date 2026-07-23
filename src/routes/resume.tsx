@@ -91,7 +91,7 @@ function App() {
       </button>
 
       <a
-        href={'public/resume.pdf'}
+        href={'resume.pdf'}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="View resume PDF"
