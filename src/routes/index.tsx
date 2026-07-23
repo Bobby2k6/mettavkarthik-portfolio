@@ -94,21 +94,19 @@ const experiences = [
     ],
   },
   {
-jobTitle: 'AI/ML Intern',
-company: 'AWS AI/ML Internship - Eduskills',
-location: 'Remote',
-startDate: 'May 2025',
-endDate: 'July 2025',
-summary: 'Basic ML workflows and cloud-based model execution',
-tags: ['Python', 'AWS', 'Machine Learning', 'Data Preprocessing', 'AWS Cloud (basic exposure)'],
-content: `
-
-• Worked on basic machine learning workflows in a cloud-based environment, performing data preprocessing and training simple models using Python.
-• Managed datasets and executed Python scripts on remote cloud instances, gaining understanding of cloud infrastructure and on-demand computing resources.
-• Explored how input data is processed and used by models to generate outputs in a cloud-based ML setup.
-  `,
-  }
-
+    jobTitle: 'AI/ML Intern',
+    company: 'AWS AI/ML Internship - Eduskills',
+    location: 'Remote',
+    startDate: 'May 2025',
+    endDate: 'July 2025',
+    summary: 'Basic ML workflows and cloud-based model execution' as string | null,
+    tags: ['Python', 'AWS', 'Machine Learning', 'Data Preprocessing', 'AWS Cloud (basic exposure)'],
+    highlights: [
+      'Worked on basic machine learning workflows in a cloud-based environment, performing data preprocessing and training simple models using Python.',
+      'Managed datasets and executed Python scripts on remote cloud instances, gaining understanding of cloud infrastructure and on-demand computing resources.',
+      'Explored how input data is processed and used by models to generate outputs in a cloud-based ML setup.',
+    ],
+  },
 ]
 
 function PortfolioPage() {
