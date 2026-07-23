@@ -91,7 +91,7 @@ function App() {
       </button>
 
       <a
-        href={`${import.meta.env.BASE_URL}resume.pdf`}
+        href="https://drive.google.com/file/d/10BjeIuM6mIKfYIFcDKkRy4YBko1-86_X/view?usp=drive_link"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="View resume PDF"
