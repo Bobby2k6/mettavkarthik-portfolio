@@ -77,7 +77,7 @@ function App() {
       </button>
 
       <a
-        href={`${import.meta.env.BASE_URL}resume.pdf`}
+        href="https://drive.google.com/file/d/10BjeIuM6mIKfYIFcDKkRy4YBko1-86_X/view?usp=drive_link"
         download="resume.pdf"
         aria-label="Download resume PDF"
         className="fixed top-6 right-6 z-50 flex items-center justify-center w-11 h-11 rounded-full border bg-background/80 backdrop-blur shadow-md hover:opacity-70 transition-opacity"

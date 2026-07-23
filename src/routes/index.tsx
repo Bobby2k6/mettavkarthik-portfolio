@@ -136,7 +136,7 @@ function PortfolioPage() {
           window.setTimeout(() => {
             setLoadingStage('done')
           }, 600)
-        }, 1000)
+        }, 500)
       }
     }, 120)
 
@@ -471,7 +471,7 @@ function PortfolioPage() {
         <section id="achievements" className="reveal mx-auto max-w-5xl scroll-mt-28 py-12">
           <h2 className="portfolio-heading">Achievements</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {['HackerRank 5 star in Java', 'Solved 250+ coding problems in Leetcode , Codechef, HackerRank', 'Certifications: Infosys, IBM, AWS'].map((item) => (
+            {['HackerRank 5 star in Java', 'Solved 250+ coding problems in Leetcode Codechef, HackerRank', 'Certifications: Infosys, IBM, AWS'].map((item) => (
               <div key={item} className="rounded-2xl border border-[var(--app-border)] bg-[var(--app-panel)] p-5 text-sm text-[var(--app-muted)]">
                 {item}
               </div>
