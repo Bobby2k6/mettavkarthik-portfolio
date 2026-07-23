@@ -167,7 +167,7 @@ function PortfolioPage() {
           window.setTimeout(() => {
             setLoadingStage('done')
           }, 600)
-        }, 500)
+        }, 400)
       }
     }, 120)
 
