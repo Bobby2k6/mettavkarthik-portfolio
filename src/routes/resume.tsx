@@ -91,12 +91,12 @@ function App() {
       </button>
 
       <a
-        href="https://drive.google.com/file/d/10BjeIuM6mIKfYIFcDKkRy4YBko1-86_X/view?usp=drive_link"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="View resume PDF"
-        className="fixed top-6 right-6 z-50 flex items-center justify-center w-11 h-11 rounded-full border bg-background/80 backdrop-blur shadow-md hover:opacity-70 transition-opacity"
-      >
+        href={`${import.meta.env.BASE_URL}resume.pdf`}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="View resume PDF"
+  className="fixed top-6 right-6 z-50 flex items-center justify-center w-11 h-11 rounded-full border bg-background/80 backdrop-blur shadow-md hover:opacity-70 transition-opacity"
+>
         <Download className="w-5 h-5" />
       </a>
 
