@@ -38,7 +38,7 @@ location: 'Remote',
 startDate: 'May 2025',
 endDate: 'July 2025',
 summary: 'Basic ML workflows and cloud-based model execution',
-tags: ['Python', 'AWS', 'Machine Learning', 'Data Preprocessing', 'Cloud Computing'],
+tags: ['Python', 'AWS', 'Machine Learning', 'Data Preprocessing', 'AWS Cloud (basic exposure)'],
 content: `
 
 • Worked on basic machine learning workflows in a cloud-based environment, performing data preprocessing and training simple models using Python.
