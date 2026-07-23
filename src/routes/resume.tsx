@@ -16,7 +16,7 @@ export const Route = createFileRoute('/resume')({
 })
 
 const jobs = [
-  {
+{
     jobTitle: 'Software Developer Intern',
     company: 'RINL, Vizag Steel Plant',
     location: 'Visakhapatnam, India',
@@ -24,12 +24,29 @@ const jobs = [
     endDate: 'July 2025',
     summary: 'Project: Predictive Maintenance Scheduler (Prototype)',
     tags: ['React (TypeScript)', 'Tailwind CSS', 'shadcn/ui', 'Recharts'],
-    content: `
-- Built a predictive maintenance web application within RINL's Industry 4.0 ecosystem, which houses the Kalpataru CoE, an IIoT facility with industrial IoT sensor kits, automation panels, and AI/ML platforms for equipment monitoring.
-- Designed dashboards to visualize equipment usage, downtime trends, and maintenance insights, aligned with RINL's OEE and IIoT monitoring objectives.
-- Gained practical exposure to how IoT sensor data pipelines feed predictive maintenance systems in a live steel plant environment.
-`,
+    highlights: [
+      "Built a predictive maintenance web application within RINL's Industry 4.0 ecosystem, which houses the Kalpataru CoE, an IIoT facility with industrial IoT sensor kits, automation panels, and AI/ML platforms for equipment monitoring.",
+      "Designed dashboards to visualize equipment usage, downtime trends, and maintenance insights, aligned with RINL's OEE and IIoT monitoring objectives.",
+      'Gained practical exposure to how IoT sensor data pipelines feed predictive maintenance systems in a live steel plant environment.',
+    ],
   },
+
+  {
+jobTitle: 'AI/ML Intern',
+company: 'AWS AI/ML Internship - Eduskills',
+location: 'Remote',
+startDate: 'May 2025',
+endDate: 'July 2025',
+summary: 'Basic ML workflows and cloud-based model execution',
+tags: ['Python', 'AWS', 'Machine Learning', 'Data Preprocessing', 'Cloud Computing'],
+content: `
+
+• Worked on basic machine learning workflows in a cloud-based environment, performing data preprocessing and training simple models using Python.
+• Managed datasets and executed Python scripts on remote cloud instances, gaining understanding of cloud infrastructure and on-demand computing resources.
+• Explored how input data is processed and used by models to generate outputs in a cloud-based ML setup.
+  `,
+  }
+
 ]
 
 const educations = [

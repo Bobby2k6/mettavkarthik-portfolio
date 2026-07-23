@@ -53,7 +53,7 @@ const projects: Project[] = [
     description:
       'A contest system focused on fair problem-solving through hidden submissions, anti-cheat guards, and real-time leaderboard updates for coding events.',
     tech: ['Java', 'Spring Boot', 'React', 'Redis'],
-    github: 'https://bobby2k6.github.io/blind-coding/',
+    github: 'https://github.com',
   },
   {
     title: 'Personal Finance Chatbot',
@@ -76,6 +76,39 @@ const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Vite', 'Monaco Editor', 'xterm.js', 'Pyodide'],
     github: 'https://github.com',
   },
+]
+
+const experiences = [
+  {
+    jobTitle: 'Software Developer Intern',
+    company: 'RINL, Vizag Steel Plant',
+    location: 'Visakhapatnam, India',
+    startDate: 'June 2025',
+    endDate: 'July 2025',
+    summary: 'Project: Predictive Maintenance Scheduler (Prototype)',
+    tags: ['React (TypeScript)', 'Tailwind CSS', 'shadcn/ui', 'Recharts'],
+    highlights: [
+      "Built a predictive maintenance web application within RINL's Industry 4.0 ecosystem, which houses the Kalpataru CoE, an IIoT facility with industrial IoT sensor kits, automation panels, and AI/ML platforms for equipment monitoring.",
+      "Designed dashboards to visualize equipment usage, downtime trends, and maintenance insights, aligned with RINL's OEE and IIoT monitoring objectives.",
+      'Gained practical exposure to how IoT sensor data pipelines feed predictive maintenance systems in a live steel plant environment.',
+    ],
+  },
+  {
+jobTitle: 'AI/ML Intern',
+company: 'AWS AI/ML Internship - Eduskills',
+location: 'Remote',
+startDate: 'May 2025',
+endDate: 'July 2025',
+summary: 'Basic ML workflows and cloud-based model execution',
+tags: ['Python', 'AWS', 'Machine Learning', 'Data Preprocessing', 'Cloud Computing'],
+content: `
+
+• Worked on basic machine learning workflows in a cloud-based environment, performing data preprocessing and training simple models using Python.
+• Managed datasets and executed Python scripts on remote cloud instances, gaining understanding of cloud infrastructure and on-demand computing resources.
+• Explored how input data is processed and used by models to generate outputs in a cloud-based ML setup.
+  `,
+  }
+
 ]
 
 function PortfolioPage() {
@@ -136,7 +169,7 @@ function PortfolioPage() {
           window.setTimeout(() => {
             setLoadingStage('done')
           }, 600)
-        }, 500)
+        }, 1500)
       }
     }, 120)
 
@@ -352,7 +385,9 @@ function PortfolioPage() {
           <p className="mb-3 text-sm uppercase tracking-[0.18em] text-[var(--app-muted)]">Visakhapatnam, India</p>
           <h1 className="text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">M V Karthikeyan</h1>
           <p className="mt-4 max-w-3xl text-base text-[var(--app-muted)] sm:text-lg">
-           • Full-stack developer turning real-world problems into scalable software, from IoT-driven industrial dashboards to AI-powered tools.
+            Full-stack developer turning real-world problems into scalable software •
+            <br />
+            From IoT-driven industrial dashboards to AI-powered tools.
           </p>
           <p className="mt-4 text-sm text-[var(--app-muted)]">BTech CSE Student (2023-2027) • CGPA 9.17 • Full Stack Web Development</p>
 
@@ -372,10 +407,7 @@ function PortfolioPage() {
         <section id="about" className="reveal mx-auto max-w-5xl scroll-mt-28 py-12">
           <h2 className="portfolio-heading">About</h2>
           <p className="portfolio-copy mt-4">
-           B.Tech CSE student interested in diverse areas of computer science, including full-stack web development, AI/ML,
-          understanding how systems are designed, and cybersecurity. Competitive programming has helped build a structured
-          approach to problem-solving, and I am comfortable leveraging AI tools to improve productivity without compromising
-          my understanding of core concepts.
+            Passionate developer building scalable web applications, strong in Data Structures and Algorithms, and deeply interested in AI-driven systems and dependable software architecture.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {['Full Stack Developer', 'Strong in DSA', 'AI & Systems Interest'].map((item) => (
@@ -388,42 +420,42 @@ function PortfolioPage() {
 
         <section id="experience" className="reveal mx-auto max-w-5xl scroll-mt-28 py-12">
           <h2 className="portfolio-heading">Experience</h2>
-          <article className="mt-6 rounded-2xl border border-[var(--app-border)] bg-[var(--app-panel)] p-6">
-            <div className="flex flex-wrap items-start justify-between gap-3">
-              <div>
-                <p className="text-xs uppercase tracking-[0.16em] text-[var(--app-muted)]">Software Developer Intern</p>
-                <h3 className="mt-2 text-2xl font-semibold">RINL, Vizag Steel Plant</h3>
-                <p className="mt-1 text-sm text-[var(--app-muted)]">Visakhapatnam, India</p>
-              </div>
-              <span className="portfolio-pill text-xs">June 2025 - July 2025</span>
-            </div>
+          <div className="mt-6 space-y-6">
+            {experiences.map((job) => (
+              <article
+                key={job.company}
+                className="rounded-2xl border border-[var(--app-border)] bg-[var(--app-panel)] p-6"
+              >
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.16em] text-[var(--app-muted)]">{job.jobTitle}</p>
+                    <h3 className="mt-2 text-2xl font-semibold">{job.company}</h3>
+                    <p className="mt-1 text-sm text-[var(--app-muted)]">{job.location}</p>
+                  </div>
+                  <span className="portfolio-pill text-xs">
+                    {job.startDate} - {job.endDate}
+                  </span>
+                </div>
 
-            <p className="mt-4 text-[var(--app-muted)]">Project: Predictive Maintenance Scheduler (Prototype)</p>
+                {job.summary && <p className="mt-4 text-[var(--app-muted)]">{job.summary}</p>}
 
-            <div className="mt-4 flex flex-wrap gap-2">Tech
-              {['React (TypeScript)', 'Tailwind CSS', 'shadcn/ui', 'Recharts'].map((stack) => (
-                <span key={stack} className="portfolio-pill text-xs">
-                  {stack}
-                </span>
-              ))}
-            </div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  Tech
+                  {job.tags.map((stack) => (
+                    <span key={stack} className="portfolio-pill text-xs">
+                      {stack}
+                    </span>
+                  ))}
+                </div>
 
-            <ul className="mt-5 list-disc space-y-2 pl-5 text-sm text-[var(--app-muted)]">
-              <li>
-                Built a predictive maintenance web application within RINL&apos;s Industry 4.0 ecosystem, which houses
-                the Kalpataru CoE, an IIoT facility with industrial IoT sensor kits, automation panels, and AI/ML
-                platforms for equipment monitoring.
-              </li>
-              <li>
-                Designed dashboards to visualize equipment usage, downtime trends, and maintenance insights, aligned
-                with RINL&apos;s OEE and IIoT monitoring objectives.
-              </li>
-              <li>
-                Gained practical exposure to how IoT sensor data pipelines feed predictive maintenance systems in a
-                live steel plant environment.
-              </li>
-            </ul>
-          </article>
+                <ul className="mt-5 list-disc space-y-2 pl-5 text-sm text-[var(--app-muted)]">
+                  {job.highlights.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section id="projects" className="reveal mx-auto max-w-5xl scroll-mt-28 py-12">
@@ -471,7 +503,7 @@ function PortfolioPage() {
         <section id="achievements" className="reveal mx-auto max-w-5xl scroll-mt-28 py-12">
           <h2 className="portfolio-heading">Achievements</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {['HackerRank 5 star in Java', 'Solved 250+ coding problems in Leetcode Codechef, HackerRank', 'Certifications: Infosys, IBM, AWS'].map((item) => (
+            {['HackerRank 5 star in Java', 'Solved 250+ coding problems in Leetcode , Codechef, HackerRank', 'Certifications: Infosys, IBM, AWS'].map((item) => (
               <div key={item} className="rounded-2xl border border-[var(--app-border)] bg-[var(--app-panel)] p-5 text-sm text-[var(--app-muted)]">
                 {item}
               </div>
